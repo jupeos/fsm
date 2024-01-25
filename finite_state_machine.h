@@ -36,9 +36,10 @@ SOFTWARE.
  * @date 25th Jan 2024
  * @brief A lightweight finite state machine.
  *
- * @details A single file intended to be included in a C source file.
- * This allows multiple state machines to be defined across different compilation units/scopes.
- * The user can modify the configuration in finite_state_machine_conf.h to suit their needs.
+ * @details Designed to be easy to use covering the basic needs of state machine functionality.
+ * A single file intended to be included in a C source file. This allows multiple state machines
+ * to be implemented across different compilation units/scopes. The user may modify the configuration
+ * in *finite_state_machine_conf.h* to suit their needs.
  *
  * Example usage:
  * @code
