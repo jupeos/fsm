@@ -189,13 +189,15 @@ static bool fsm_handle_event( state_machine_t* fsm, event_t* event )
                 transition->action( fsm->currentState->data, event );
             }
 
+            // Move to the next state.
+            fsm->currentState = transition->nextState;            
+
             // Perform the entry action (if there is one).
             if( transition->nextState->entryAction )
             {
                 transition->nextState->entryAction( transition->nextState->data, event );
             }
 
-            // Transition complete so update the state.
             fsm->currentState = transition->nextState;
             retVal = true;
         }
